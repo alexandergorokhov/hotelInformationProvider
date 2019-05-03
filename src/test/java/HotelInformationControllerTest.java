@@ -16,10 +16,11 @@ import utils.TestUtils;
 import java.util.LinkedList;
 import java.util.List;
 
+import static org.hamcrest.core.Is.is;
 import static org.mockito.Mockito.*;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = HotelInformationControllerTest.class)
@@ -48,12 +49,15 @@ public class HotelInformationControllerTest {
         listHotel.add(hotel);
 
 
-        when(hotelInformationService.findAll()).thenReturn( listHotel);
-        mockMvc.perform(get("/info/hotels"))
-                .andExpect(status().isOk());
+        when(hotelInformationService.findAll()).thenReturn(listHotel);
 
-               // .andExpect((ResultMatcher) jsonPath("$.status", is(200)));
-                //.andExpect((ResultMatcher) jsonPath("$.name", is("ControllerTestHotelOne")));
+        mockMvc.perform(get("/info/hotels"))
+
+                .andExpect(jsonPath("$").isArray())
+                .andExpect(jsonPath("$[0].id", is(1)))
+                .andExpect(jsonPath("$[0].id", is(1)))
+                .andExpect(jsonPath("$[0].name", is("ControllerTestHotelOne")))
+                .andExpect(jsonPath("$[0].location.address", is("500 East A Stree South")));
         verify(hotelInformationService, times(1)).findAll();
         verifyNoMoreInteractions(hotelInformationService);
 
