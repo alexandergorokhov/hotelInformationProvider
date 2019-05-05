@@ -16,4 +16,8 @@ public class HotelInformationService {
         List<Hotel> listHotels = hotelInformationDao.findAll();
         return listHotels;
     }
+
+    public void save(Hotel hotel) {
+        hotelInformationDao.save(hotel);
+    }
 }

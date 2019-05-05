@@ -3,11 +3,13 @@ package information.provider.pojo;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
 @Getter
 @Setter
 public class Hotel {
+    @Id
     private long id;
     private boolean published;
     private boolean test;
