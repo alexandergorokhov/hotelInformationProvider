@@ -8,4 +8,11 @@ import java.time.LocalDateTime;
 @Setter
 public class CheckOut {
     private LocalDateTime to;
+
+    @Override
+    public String toString() {
+        return "CheckOut{" +
+                "to=" + to +
+                '}';
+    }
 }

@@ -9,4 +9,11 @@ import org.springframework.data.annotation.Id;
 public class PictureCategory {
     @Id
     private long id;
+
+    @Override
+    public String toString() {
+        return "PictureCategory{" +
+                "id=" + id +
+                '}';
+    }
 }

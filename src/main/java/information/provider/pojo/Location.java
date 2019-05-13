@@ -13,4 +13,14 @@ public class Location {
     private BigDecimal latitude;
     private BigDecimal logtitude;
 
+    @Override
+    public String toString() {
+        return "Location{" +
+                "city=" + city +
+                ", address='" + address + '\'' +
+                ", zipcode='" + zipcode + '\'' +
+                ", latitude=" + latitude +
+                ", logtitude=" + logtitude +
+                '}';
+    }
 }
