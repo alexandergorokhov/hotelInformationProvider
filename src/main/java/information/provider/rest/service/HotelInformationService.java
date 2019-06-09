@@ -60,7 +60,6 @@ public class HotelInformationService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private void populateTheDataBase(JSONArray wordsArray) {

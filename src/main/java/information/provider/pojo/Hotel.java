@@ -21,6 +21,26 @@ public class Hotel {
     private boolean published;
     private boolean test;
     private String name;
+
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "id=" + id +
+                ", published=" + published +
+                ", test=" + test +
+                ", name='" + name + '\'' +
+                ", hotelType=" + hotelType +
+                ", stars=" + stars +
+                ", location=" + location +
+                ", checkIn=" + checkIn +
+                ", checkOut=" + checkOut +
+                ", mainPicture=" + mainPicture +
+                ", numberOfRooms=" + numberOfRooms +
+                ", creationDate=" + creationDate +
+                ", lastmodifiedDate=" + lastmodifiedDate +
+                '}';
+    }
+
     private HotelType hotelType;
     private int stars;
     private Location location;

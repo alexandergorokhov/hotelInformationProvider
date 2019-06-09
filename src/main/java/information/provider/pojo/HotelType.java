@@ -9,4 +9,11 @@ import org.springframework.data.annotation.Id;
 public class HotelType {
     @Id
     private String id;
+
+    @Override
+    public String toString() {
+        return "HotelType{" +
+                "id='" + id + '\'' +
+                '}';
+    }
 }

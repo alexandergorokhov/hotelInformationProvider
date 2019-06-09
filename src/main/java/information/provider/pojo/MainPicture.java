@@ -14,4 +14,16 @@ public class MainPicture {
     private int height;
     private int order;
     private PictureCategory pictureCategory;
+
+    @Override
+    public String toString() {
+        return "MainPicture{" +
+                "url='" + url + '\'' +
+                ", id=" + id +
+                ", width=" + width +
+                ", height=" + height +
+                ", order=" + order +
+                ", pictureCategory=" + pictureCategory +
+                '}';
+    }
 }
