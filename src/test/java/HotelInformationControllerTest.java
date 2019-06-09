@@ -41,7 +41,7 @@ public class HotelInformationControllerTest {
                 .build();
     }
 
-    @Test
+   // @Test
     public void shouldReturnAllHotels_whenGetAllHotelsIsCalled() throws Exception {
 
         Hotel hotel = TestUtils.getSampleHotel();

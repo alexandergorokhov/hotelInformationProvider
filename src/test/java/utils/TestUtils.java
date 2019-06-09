@@ -7,11 +7,17 @@ import java.time.LocalDateTime;
 
 public class TestUtils {
     public static Hotel getSampleHotel(){
-        Hotel hotel = new Hotel();
+    /*    Hotel.builder()
+                .id(1)
+                .published(true)
+                .test(false)
+                .name("ControllerTestHotelOne")
+                .hotelType(new HotelType())
+                .
         hotel.setId(1);
         hotel.setPublished(true);
         hotel.setTest(false);
-        hotel.setName("ControllerTestHotelOne");
+        hotel.setName();
         HotelType hotelType = new HotelType();
         hotelType.setId("HOT");
         hotel.setHotelType(hotelType);
@@ -45,5 +51,8 @@ public class TestUtils {
         hotel.setCreationDate(LocalDateTime.now());
         return hotel;
 
+
+  */
+    return null;
     }
 }
